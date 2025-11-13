@@ -1,10 +1,10 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { ReactiveFormsModule, UntypedFormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../service/auth.service';
-import { Router } from '@angular/router';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import {Component, inject, OnInit} from '@angular/core';
+import {ReactiveFormsModule, UntypedFormBuilder, Validators} from '@angular/forms';
+import {AuthService} from '../service/auth.service';
+import {Router} from '@angular/router';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
 	selector: 'app-login',
@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
 		password: ['admin', Validators.required],
 	});
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+	}
 
 	loginUser() {
 		this.authService.login().subscribe((data) => {
